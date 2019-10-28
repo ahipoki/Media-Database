@@ -3,6 +3,12 @@ using namespace std;
 
 struct Media {
   char title[80];
+  int year;
+  char publisher[80];
+  float rating;
+  char artist[80];
+  float duration;
+  char director[80];
 }
 
 void addMedia(vector<Media*>*vecM) {
