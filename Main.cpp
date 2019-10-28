@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+void addMedia(vector<Media*>*vecM) {
+  vecM->push_bacK(new Media());
+  cout << 
+}
+
 int main() {
   vector<Media*> *vecM = new vector<Media*>;
   while (true) {
