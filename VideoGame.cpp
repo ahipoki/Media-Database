@@ -7,18 +7,18 @@ void videoGame : public Media
   float rating;
 }
 
-getTitle() {//Method for getting the title
-
+char getTitle() {//Method for getting the title
+  return char[80];
 }
 
-getYear() {//Method for getting the year
-
+int getYear() {//Method for getting the year
+  return int;
 }
 
-getPublisher() {//Method for getting the publisher
-
+char getPublisher() {//Method for getting the publisher
+  return char[80];
 }
 
-getRating() {//Method for getting the rating
-
+float getRating() {//Method for getting the rating
+  return float;
 }
