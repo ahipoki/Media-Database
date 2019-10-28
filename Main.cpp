@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+struct Media {
+  char title[80];
+}
+
 void addMedia(vector<Media*>*vecM) {
   char addInput[80];
   vecM->push_bacK(new Media());
@@ -27,6 +31,10 @@ void searchMedia(vector<Media*>*vecM) {
   cin.getline(searchInput, sizeof(searchInput));
   if (strcmp(searchInput, "TITLE") == 0) {
     //Search by title
+    for (vector<Media*>::iterator i = vecM->begin(); i != vecM->end(); i++) {//For the vector of students, use an iterator to go from the beginning to the end
+    cout << (*i)->title << ", " << (*i)->lastName << ", " << (*i)->id << ", " <<((float)(int)(((*i)->gpa)*100))/100 << endl;
+    //Print out the first and last names, id, and gpa
+  }
   }
   else if (strcmp(searchInput, "YEAR") == 0) {
     //Search by year
