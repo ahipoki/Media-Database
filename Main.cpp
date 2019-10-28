@@ -2,8 +2,54 @@
 using namespace std;
 
 void addMedia(vector<Media*>*vecM) {
+  char addInput[80];
   vecM->push_bacK(new Media());
-  cout << 
+  cout << "Do you want to add a video game, music, or movie? (VIDEO GAME/MUSIC/MOVIE)" << endl;
+  cin.getline(addInput, sizeof(addInput));
+  if (strcmp(addInput, "VIDEO GAME") == 0) {
+    //Add video game
+  }
+  else if (strcmp(addInput, "MUSIC") == 0) {
+    //Add music
+  }
+  else if (strcmp(addInput, "MOVIE") == 0) {
+    //Add movie
+  }
+  else {
+    cout << "That's an invalid option" << endl;
+  }
+}
+
+void searchMedia(vector<Media*>*vecM) {
+  char searchInput[80];
+  vecM->push_back(new Media());
+  cout << "Do you want to search by title or year? (TITLE/YEAR)" << endl;
+  cin.getline(searchInput, sizeof(searchInput));
+  if (strcmp(searchInput, "TITLE") == 0) {
+    //Search by title
+  }
+  else if (strcmp(searchInput, "YEAR") == 0) {
+    //Search by year
+  }
+  else {
+    cout << "That's an invalid option" << endl;
+  }
+}
+
+void deleteMedia(vector<Media*>*vecM) {
+  char deleteInput[80];
+  vecM->push_back(new Media());
+  cout << "Do you want to delete by title or year? (TITLE/YEAR)" << endl;
+  cin.getline(deleteInput, sizeof(deleteInput));
+  if (strcmp(deleteInput, "TITLE") == 0) {
+    //Delete by title
+  }
+  else if (strcmp(deleteInput, "YEAR") == 0) {
+    //Delete by year
+  }
+  else {
+    cout << "That's an invalid option" << endl;
+  }
 }
 
 int main() {
