@@ -1,8 +1,8 @@
 class Media
 {
   private:
-    int num;
+    char title[80];
+    int year;
   public:
-    Num(int n);
     void getType();
 };
