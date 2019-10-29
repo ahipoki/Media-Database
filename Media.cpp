@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Media.h"
+
 using namespace std;
 
 void media() {
@@ -6,6 +8,6 @@ void media() {
   int year;
 }
 
-void getType() {
+void Media::getType() {
   return void;
 }
