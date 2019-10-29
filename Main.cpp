@@ -31,19 +31,26 @@ void addMedia(vector<Media*>*vecM) {
 }
 
 void searchMedia(vector<Media*>*vecM) {
+  VideoGame game;
   char searchInput[80];
+  char typeInput[80];
   vecM->push_back(new Media());
   cout << "Do you want to search by title or year? (TITLE/YEAR)" << endl;
   cin.getline(searchInput, sizeof(searchInput));
-  if (strcmp(searchInput, "TITLE") == 0) {
-    //Search by title
+  if (strcmp(searchInput, "TITLE") == 0) {//Search by title
+    cout << "Enter the title of the media you wish to search for" << endl;
+    cin.getline(typeInput, sizeof(typeInput));
     for (vector<Media*>::iterator i = vecM->begin(); i != vecM->end(); i++) {//For the vector of students, use an iterator to go from the beginning to the end
-    cout << (*i)->title << ", " << (*i)->lastName << ", " << (*i)->id << ", " <<((float)(int)(((*i)->gpa)*100))/100 << endl;
+      if (typeInput == (*i)->title) {
+        cout << (*i)->title << ", " << (*i)->year << ", " << (*i)->publisher << ", " << rating << endl;
+        //Print out the first and last names, id, and gpa
+      }
+    }
+  }
+  else if (strcmp(searchInput, "YEAR") == 0) {//Search by year
+    for (vector<Media*>::iterator i = vecM->begin(); i != vecM->end(); i++) {//For the vector of students, use an iterator to go from the beginning to the end
+    cout << (*i)->title << ", " << (*i)->artist << ", " << (*i)->year << ", " << duration << (*i)->publisher << endl;
     //Print out the first and last names, id, and gpa
-  }
-  }
-  else if (strcmp(searchInput, "YEAR") == 0) {
-    //Search by year
   }
   else {
     cout << "That's an invalid option" << endl;
