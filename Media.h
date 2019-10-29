@@ -4,5 +4,5 @@ class Media
     int num;
   public:
     Num(int n);
-    int getNum();
+    void getType();
 };
