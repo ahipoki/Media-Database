@@ -22,3 +22,7 @@ char getPublisher() {//Method for getting the publisher
 float getRating() {//Method for getting the rating
   return float;
 }
+
+int getType() {
+  return int;
+}
