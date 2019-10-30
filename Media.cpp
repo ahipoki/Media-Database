@@ -9,5 +9,5 @@ void media() {
 }
 
 void Media::getType() {
-  return void;
+  return;
 }

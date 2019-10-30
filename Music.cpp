@@ -8,21 +8,26 @@ void music() {
 }
 
 char getTitle() {
-  return char[80];
+  cout<<"Title"<<endl;
+  //return char[80];
 }
 
 char getArtist() {
-  return char[80];
+  cout<<"Artist"<<endl;
+  //return char[80];
 }
 
 int getYear() {
-  return int;
+  cout<<"Year"<<endl;
+  //return int;
 }
 
 float getDuration() {
-  return float;
+  cout<<"Duration"<<endl;
+  //return float;
 }
 
 char getPublisher() {
-  return char[80];
+  cout<<"Publisher"<<endl;
+  //return char[80];
 }

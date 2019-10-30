@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstring>
+#include <vector>
+#include <iterator>
 using namespace std;
 
 struct Media {
@@ -9,9 +12,9 @@ struct Media {
   char artist[80];
   float duration;
   char director[80];
-}
+};
 
-void addMedia(vector<Media*>*vecM) {
+int addMedia(vector<Media*>*vecM) {
   char addInput[80];
   char titleInput[80];
   int yearInput;

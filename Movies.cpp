@@ -8,21 +8,26 @@ void movies() {
 }
 
 char getTitle() {
-  return char[80];
+  cout<<"Title"<<endl;
+  //return char[80];
 }
 
 char getDirector() {
-  return char[80];
+  cout<<"Director"<<endl;
+  //return char[80];
 }
 
 int getYear() {
-  return int;
+  cout<<"Year"<<endl;
+  //return int;
 }
 
 float getDuration() {
-  return float;
+  cout<<"Duration"<<endl;
+  //return float;
 }
 
 float getRating() {
-  return float;
+  cout<<"Rating"<<endl;
+  //return float;
 }
