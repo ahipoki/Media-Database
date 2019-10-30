@@ -13,11 +13,25 @@ struct Media {
 
 void addMedia(vector<Media*>*vecM) {
   char addInput[80];
+  char titleInput[80];
+  int yearInput;
+  char publisherInput[80];
+  float ratingInput;
+  char artistInput[80];
+  float durationInput;
+  char directorInput[80];
   vecM->push_bacK(new Media());
   cout << "Do you want to add a video game, music, or movie? (VIDEO GAME/MUSIC/MOVIE)" << endl;
   cin.getline(addInput, sizeof(addInput));
   if (strcmp(addInput, "VIDEO GAME") == 0) {
-    //Add video game
+    cout<<"What is the title?"<<endl;
+    cin.getline(titleInput, sizeof(titleInput));
+    cout<<"What is the year?"<<endl;
+    cin>>yearInput;
+    cout<<"Who is the publisher?"<<endl;
+    cin.getline(publisherInput, sizeof(publisherInput));
+    cout<<"What is the rating?"<<endl;
+    cin>>ratingInput;
   }
   else if (strcmp(addInput, "MUSIC") == 0) {
     //Add music
