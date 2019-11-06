@@ -2,21 +2,21 @@
 #include <cstring>
 using namespace std;
 
-class Music
+class Movie
 {
  public:
-  Music(char*);
-  char* getType();
+  Movie(char*);
+  char[] getType();
   int getID();
-  char getTitle();
-  char getArtist();
+  char[] getTitle();
+  char[] getDirector();
   int getYear();
   float getDuration();
-  char getPublisher();
+  float getRating();
   int getType();
  private:
-  char* type[80];
-  char artist[80];
+  char type[80];
+  float rating;
+  char director[80];
   float duration;
-  char publisher[80];
 }

@@ -1,34 +1,41 @@
 #include <iostream>
-#include "VideoGames.h"
+#include <string.h>
+#include "VideoGame.h"
 using namespace std;
 
-void videoGame :: public Media
+VideoGame::VideoGame(string* newtype)
 {
-  char publisher[80];
-  float rating;
+  type = newtype;
+  id = 0;
+  //publisher
+  rating = 0.0;
 }
 
-char getTitle() {//Method for getting the title
+string* VideoGame::getType() {
+  return type;
+}
+
+string* VideoGame::getTitle() {//Method for getting the title
   cout<<"Title"<<endl;
   //return char[80];
 }
 
-int getYear() {//Method for getting the year
+int VideoGame::getYear() {//Method for getting the year
   cout<<"Year"<<endl;
   //return int;
 }
 
-char getPublisher() {//Method for getting the publisher
+string* VideoGame::getPublisher() {//Method for getting the publisher
   cout<<"Publisher"<<endl;
   //return char[80];
 }
 
-float getRating() {//Method for getting the rating
+float VideoGame::getRating() {//Method for getting the rating
   cout<<"Rating"<<endl;
   //return float;
 }
 
-int getType() {
-  cout<<"Type"<<endl;
+//string* VideoGame::getType() {
+//cout<<"Type"<<endl;
   //return int;
-}
+//}
