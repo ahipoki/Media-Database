@@ -1,21 +1,22 @@
 #include <iostream>
-#include <string.h>
+#include <cstring>
 #include "VideoGame.h"
 using namespace std;
 
-VideoGame::VideoGame(string* newtype)
+VideoGame::VideoGame(char newTitle[], int newYear, char newPublisher[], int newRating, int newID, int newType)
 {
-  type = newtype;
-  id = 0;
-  //publisher
-  rating = 0.0;
+  strcpy(title, newTitle);
+  ID = newID;
+  strcpy(publisher, newPublisher);
+  rating = newRating;
+  type = newType;
 }
 
-string* VideoGame::getType() {
+int VideoGame::getType() {
   return type;
 }
 
-string* VideoGame::getTitle() {//Method for getting the title
+char* VideoGame::getTitle() {//Method for getting the title
   cout<<"Title"<<endl;
   //return char[80];
 }
@@ -25,17 +26,12 @@ int VideoGame::getYear() {//Method for getting the year
   //return int;
 }
 
-string* VideoGame::getPublisher() {//Method for getting the publisher
+char* VideoGame::getPublisher() {//Method for getting the publisher
   cout<<"Publisher"<<endl;
   //return char[80];
 }
 
-float VideoGame::getRating() {//Method for getting the rating
+int VideoGame::getRating() {//Method for getting the rating
   cout<<"Rating"<<endl;
   //return float;
 }
-
-//string* VideoGame::getType() {
-//cout<<"Type"<<endl;
-  //return int;
-//}

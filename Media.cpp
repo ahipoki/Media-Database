@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void media() {
+void Media() {
   char title[80];
   int year;
 }

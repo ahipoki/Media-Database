@@ -4,16 +4,6 @@
 #include <iterator>
 using namespace std;
 
-struct Media {
-  char title[80];
-  int year;
-  char publisher[80];
-  float rating;
-  char artist[80];
-  float duration;
-  char director[80];
-};
-
 int addMedia(vector<Media*>*vecM) {
   char addInput[80];
   char titleInput[80];

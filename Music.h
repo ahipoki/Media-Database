@@ -19,4 +19,7 @@ class Music
   char artist[80];
   float duration;
   char publisher[80];
+  int year;
+  int ID;
+  char* title[80];
 }

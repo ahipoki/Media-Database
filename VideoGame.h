@@ -5,16 +5,18 @@ using namespace std;
 class VideoGame
 {
   public:
-    VideoGame(string*);
-    string* getType();
+  VideoGame(char[], int, char[], int, int, int);
+    char* getTitle();
     int getID();
-    char getTitle();
     int getYear();
-    char getPublisher();
-    float getRating();
-    //int getType();
+    char* getPublisher();
+    int getRating();
+    int getType();
  private:
-    string* type;
-    float rating;
+    int type;
+    char title[80];
+    int rating;
+    int year;
+    int ID;
     char publisher[80];
 };

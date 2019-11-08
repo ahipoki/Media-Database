@@ -5,18 +5,18 @@ using namespace std;
 class Movie
 {
  public:
-  Movie(char*);
-  char[] getType();
-  int getID();
-  char[] getTitle();
-  char[] getDirector();
+  Movie(char*, int, int, int, char*, float);
+  int getType();
+  char* getTitle();
+  char* getDirector();
   int getYear();
   float getDuration();
-  float getRating();
-  int getType();
+  int getRating();
  private:
-  char type[80];
-  float rating;
+  int type;
+  char title[80];
+  int rating;
   char director[80];
   float duration;
-}
+  int year;
+};
