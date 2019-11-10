@@ -1,23 +1,23 @@
 #include <iostream>
+#include <cstring>
+#include "Movie.h"
 using namespace std;
 
-Movie::Movie(string* newtype) {
-  type = newtype;
-  //char director[80];
-  duration = 0.0;
-  rating = 0.0;
+Movie::Movie(char[] newTitle, char[] newDirector, int newYear, float newDuration, int rating, int newType) {
+  title = newTitle;
+  director = newDirector;
+  year = newYear;
+  duration = newDuration;
+  rating = newRating;
+  type = newType;
 }
 
-char* Movie::getType() {
-  return type;
-}
-
-char[]* Movie::getTitle() {
+char* Movie::getTitle() {
   cout<<"Title"<<endl;
   //return char[80];
 }
 
-char[]* Movie::getDirector() {
+char* Movie::getDirector() {
   cout<<"Director"<<endl;
   //return char[80];
 }
@@ -32,7 +32,12 @@ float Movie::getDuration() {
   //return float;
 }
 
-float Movie::getRating() {
+int Movie::getRating() {
   cout<<"Rating"<<endl;
   //return float;
+}
+
+int Movie::getType() {
+  cout<<"Type"<<endl;
+  return type;
 }
