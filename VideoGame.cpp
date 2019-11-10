@@ -3,10 +3,10 @@
 #include "VideoGame.h"
 using namespace std;
 
-VideoGame::VideoGame(char[] newTitle, int newID, char[] newPublisher, int newRating, int newType)
+VideoGame::VideoGame(char[] newTitle, int newYear, char[] newPublisher, int newRating, int newType)
 {
   title = newTitle;
-  id = newID;
+  year = newYear;
   publisher = newPublisher
   rating = newRating;
   type = newType;
