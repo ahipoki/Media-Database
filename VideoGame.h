@@ -1,20 +1,20 @@
 #include <iostream>
-#include <string.h>
+#include <cstring>
 using namespace std;
 
 class VideoGame
 {
   public:
-    VideoGame(string*);
-    string* getType();
-    int getID();
+    VideoGame(char[], int, char[], int, int);
     char getTitle();
     int getYear();
     char getPublisher();
-    float getRating();
-    //int getType();
+    int getRating();
+    int getType();
  private:
-    string* type;
-    float rating;
+    char title[80];
+    int year;
     char publisher[80];
+    int publisher;
+    int rating;
 };
