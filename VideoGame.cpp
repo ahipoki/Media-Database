@@ -9,9 +9,9 @@ VideoGame::VideoGame(char newTitle[], int newYear, char newPublisher[], int newR
   publisher = newPublisher;
   rating = newRating;
   type = newType;
-}
+};
 
-char* VideoGame::getTitle() {//Method for getting the title
+char VideoGame::getTitle() {//Method for getting the title
   cout<<"Title"<<endl;
   //return char[80];
 
@@ -19,7 +19,7 @@ int VideoGame::getYear() {//Method for getting the year
   std::cout << "Year" << std::endl;
 }
 
-char* VideoGame::getPublisher() {//Method for getting the publisher
+char VideoGame::getPublisher() {//Method for getting the publisher
   cout<<"Publisher"<<endl;
   //return char[80];
 }

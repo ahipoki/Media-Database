@@ -19,4 +19,4 @@ class Music
   float duration;
   char publisher[80];
   int type;
-}
+};

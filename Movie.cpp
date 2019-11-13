@@ -12,12 +12,12 @@ Movie::Movie(char[] newTitle, char[] newDirector, int newYear, float newDuration
   type = newType;
 }
 
-char* Movie::getTitle() {
+char Movie::getTitle() {
   cout << "Title" << endl;
   //return char[80];
 }
 
-char* Movie::getDirector() {
+char Movie::getDirector() {
   cout << "Director" << endl;
   //return char[80];
 }

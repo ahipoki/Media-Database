@@ -19,5 +19,5 @@ class Movie
   float duration;
   int rating;
   int type;
-}
+};
 

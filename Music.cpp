@@ -11,11 +11,11 @@ Music::Music(char[] newTitle, char[] newArtist, int newYear, float newDuration, 
   type = newType;
 }
 
-char* Music::getTitle() {
+char Music::getTitle() {
   std::cout << "Title" << std::endl;
 }
 
-char* Music::getArtist() {
+char Music::getArtist() {
   std::cout << "Artist" << std::endl;
 }
 
@@ -27,7 +27,7 @@ float Music::getDuration() {
   std::cout << "Duration" << std::endl;
 }
 
-char* Music::getPublisher() {
+char Music::getPublisher() {
   std::cout << "Publisher" << std::endl;
 }
 
