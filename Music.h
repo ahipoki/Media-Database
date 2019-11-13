@@ -5,9 +5,7 @@ using namespace std;
 class Music
 {
  public:
-  Music(char[]);
-  char* getType();
-  int getID();
+  Music(char[], char[], int, float, char[], int);
   char getTitle();
   char getArtist();
   int getYear();
@@ -15,11 +13,10 @@ class Music
   char getPublisher();
   int getType();
  private:
-  char* type[80];
+  char title[80];
   char artist[80];
+  int year;
   float duration;
   char publisher[80];
-  int year;
-  int ID;
-  char* title[80];
+  int type;
 }

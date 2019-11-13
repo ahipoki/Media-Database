@@ -2,13 +2,13 @@
 #include <cstring>
 #include "Music.h"
 
-Music::Music(int newtype) {
-  type = newtype;
+Music::Music(char[] newTitle, char[] newArtist, int newYear, float newDuration, char[] newPublisher, int newType) {
+  title = newTitle;
+  artist = newArtist;
+  year = newYear;
   duration = newDuration;
-}
-
-char* Music::getDescription() {
-  std::cout << "Type" << std::endl;
+  publisher = newPublisher;
+  type = newType;
 }
 
 char* Music::getTitle() {
@@ -29,4 +29,8 @@ float Music::getDuration() {
 
 char* Music::getPublisher() {
   std::cout << "Publisher" << std::endl;
+}
+
+int Music::getType() {
+  std::cout << "Type" << std::endl;
 }
