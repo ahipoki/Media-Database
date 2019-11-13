@@ -5,7 +5,7 @@ using namespace std;
 class Music
 {
  public:
-  Music(char*);
+  Music(char[]);
   char* getType();
   int getID();
   char getTitle();
