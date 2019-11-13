@@ -2,6 +2,9 @@
 #include <cstring>
 #include <vector>
 #include <iterator>
+#include "VideoGame.h"
+#include "Music.h"
+#include "Movie.h"
 
 int addMedia(vector<Media*>*vecM) {
   char addInput[80];
