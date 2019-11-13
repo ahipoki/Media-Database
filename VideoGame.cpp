@@ -14,25 +14,20 @@ VideoGame::VideoGame(char[] newTitle, int newYear, char[] newPublisher, int newR
 
 char* VideoGame::getTitle() {//Method for getting the title
   cout<<"Title"<<endl;
-  //return char[80];
 }
 
 int VideoGame::getYear() {//Method for getting the year
   cout<<"Year"<<endl;
-  //return int;
 }
 
 char* VideoGame::getPublisher() {//Method for getting the publisher
   cout<<"Publisher"<<endl;
-  //return char[80];
 }
 
 int VideoGame::getRating() {//Method for getting the rating
   cout<<"Rating"<<endl;
-  //return float;
 }
 
 int VideoGame::getType() {
   cout<<"Type"<<endl;
-  return int;
 }
