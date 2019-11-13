@@ -1,40 +1,32 @@
 #include <iostream>
 #include <cstring>
 #include "Music.h"
-using namespace std;
 
-Music::Music(char* newtype) {
+Music::Music(int newtype) {
   type = newtype;
-  duration = 0.0;
-  //char artist[80];
-  //char publisher[80];
+  duration = newDuration;
 }
 
 char* Music::getDescription() {
-  return description;
+  std::cout << "Type" << std::endl;
 }
 
 char* Music::getTitle() {
-  cout<<"Title"<<endl;
-  //return char[80];
+  std::cout << "Title" << std::endl;
 }
 
 char* Music::getArtist() {
-  cout<<"Artist"<<endl;
-  //return char[80];
+  std::cout << "Artist" << std::endl;
 }
 
 int Music::getYear() {
-  cout<<"Year"<<endl;
-  //return int;
+  std::cout << "Year" << std::endl;
 }
 
 float Music::getDuration() {
-  cout<<"Duration"<<endl;
-  //return float;
+  std::cout << "Duration" << std::endl;
 }
 
 char* Music::getPublisher() {
-  cout<<"Publisher"<<endl;
-  //return char[80];
+  std::cout << "Publisher" << std::endl;
 }
