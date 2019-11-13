@@ -27,6 +27,6 @@ int VideoGame::getRating() {//Method for getting the rating
   std::cout << "Rating" << std::endl;
 }
 
-int VideoGame::getType() {
+int VideoGame::getType() {//Method for getting the type
   std::cout << "Type" << std::endl;
 }
