@@ -1,13 +1,23 @@
 #include <iostream>
+#include <cstring>
 #include "Media.h"
 
 using namespace std;
 
-void Media() {
-  char title[80];
-  int year;
+Media::Media(char newTitle, int newYear, int newType) {
+  title = newTitle;
+  year = newYear;
+  type = newType;
 }
 
-void Media::getType() {
-  return;
+char Media::getTitle() {
+  return title;
+}
+
+int Media::getYear() {
+  return year;
+}
+
+int Media::getType() {
+  return type;
 }
