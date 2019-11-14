@@ -31,13 +31,13 @@ void addMedia(vector<Media*>*mListM) {
       typeInput[i] = toupper(typeInput[i]);
     }
     if (strcmp(typeInput, "Videogames") == 0) {
-      return false;
+      break;
     }
     else if (strcmp(typeInput, "Movies") == 0) {
-      return false;
+      break;
     }
     else if (strcmp(typeInput, "Music") == 0) {
-      return false;
+      break;
     }
     else {
       cout << "That's an invalid option" << endl;
@@ -62,19 +62,19 @@ void deleteMedia(vector<Media*>*mListM) {
     cin.clear();
     cin.ignore(999, '\n');
     for (int i = 0; i < strlen(deleteInput); i++) {
-      deleteInput[i] = toupper(deleteInput[i]);
+      deleteInput[i] = lower(deleteInput[i]);
     }
-    if (strcmp(deleteInput, "Title") == 0) {
+    if (strcmp(deleteInput, "title") == 0) {
       return false;
     }
-    else if (strcmp(deleteInput, "Year") == 0) {
+    else if (strcmp(deleteInput, "year") == 0) {
       return false;
     }
     else {
       std::cout << "That's an invalid option" << std::endl;
     }
     vector<Media*>::iterator mListIt;
-    if(strcmp(deleteInput, "Title") == 0) {
+    if(strcmp(deleteInput, "title") == 0) {
       char titleInput[80] = "";
       std::cout << "What is the title?" << std::endl;
       cin.getline(titleInput, 80);
@@ -84,10 +84,10 @@ void deleteMedia(vector<Media*>*mListM) {
 	if (strcmp((*mListIt)->getTitle(), titleInput) == 0) {
 	  int mediaType = (*mListIt)->getType();
 	  if (mediaType == 1) {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Videogames*)(*mListIt))->getPublisher() << ", " << ((VideoGames*)(*mListIt))->getRating() << std::endl;
+	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
 	  }
 	  else if (mediaType == 2) {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getRating() << std::endl;
+	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
 	  }
 	  else if (mediaType == 3) {
 	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
