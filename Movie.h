@@ -4,17 +4,17 @@
 class Movie
 {
  public:
-  Movie(char[], char[], int, float, int, int);
-  char getTitle();
+  Movie(char[], int, int, int);
+  //char getTitle();
   char getDirector();
-  int getYear();
+  //int getYear();
   int getDuration();
   int getRating();
   int getType();
  private:
-  char title;
+  //char title;
   char director[80];
-  int year;
+  //int year;
   int duration;
   int rating;
   int type;
