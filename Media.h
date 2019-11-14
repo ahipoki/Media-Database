@@ -1,8 +1,9 @@
 class Media
 {
   private:
-    char title[80];
-    int year;
+    Media(char[], int);
+    char getTitle();
+    int getYear;
   public:
-    void getType();
+    int type();
 };

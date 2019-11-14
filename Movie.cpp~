@@ -13,25 +13,36 @@ Movie::Movie(char[] newTitle, char[] newDirector, int newYear, float newDuration
 }
 
 char Movie::getTitle() {
-  return title;
+  cout << "Title" << endl;
+  //return char[80];
 }
 
 char Movie::getDirector() {
-  return director;
+  cout << "Director" << endl;
+  //return char[80];
 }
 
 int Movie::getYear() {
-  return year;
+  cout << "Year" << endl;
+  //return int;
 }
 
 int Movie::getRating() {
-  return rating;
+  cout<<"Rating"<<endl;
+  //return int;
 }
 
 float Movie::getDuration() {
-  return duration;
+  cout << "Duration" << endl;
+  //return float;
+}
+
+int Movie::getRating() {
+  cout << "Rating" << endl;
+  //return float;
 }
 
 int Movie::getType() {
-  return type;
+  cout << "Type" << endl;
+  //return type;
 }
