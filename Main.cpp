@@ -6,6 +6,7 @@
 #include "Music.h"
 #include "Movie.h"
 #include "Media.h"
+using namespace V;
 
 int addMedia(vector<Media*>*vecM) {
   char addInput[80];

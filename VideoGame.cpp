@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cstring>
 #include "VideoGame.h"
+using namespace V;
 
-VideoGame::VideoGame(char newTitle[], int newYear, char newPublisher[], int newRating, int newID, int newType)
+VideoGame::VideoGame(char newTitle[80], int newYear, char newPublisher[80], int newRating, int newID, int newType)
 {
   title = newTitle;
   year = newYear;

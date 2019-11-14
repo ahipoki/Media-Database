@@ -1,20 +1,24 @@
+#pragma once
+
 #include <iostream>
 #include <cstring>
-using namespace std;
 
-class VideoGame
+namespace V
 {
- public:
-    VideoGame(char[], int, char[], int, int);
+  class VideoGame
+  {
+  public:
+    VideoGame(char[80], int, char[80], int, int);
     char getTitle();
     int getYear();
     char getPublisher();
     int getRating();
     int getType();
- private:
+  private:
     char title[80];
     int year;
     char publisher[80];
     int rating;
     int type;
-};
+  };
+}

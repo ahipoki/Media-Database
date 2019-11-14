@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cstring>
 #include "VideoGame.h"
+using namespace V;
 
-VideoGame::VideoGame(char newTitle[], int newYear, char newPublisher[], int newRating, int newID, int newType)
+VideoGame::VideoGame(char newTitle[80], int newYear, char newPublisher[80], int newRating, int newID, int newType)
 {
   title = newTitle;
   year = newYear;
@@ -11,24 +12,21 @@ VideoGame::VideoGame(char newTitle[], int newYear, char newPublisher[], int newR
   type = newType;
 };
 
-char VideoGame::getTitle() {//Method for getting the title
-  cout<<"Title"<<endl;
-  //return char[80];
-
+char VideoGame::getTitle()[] {//Method for getting the title
+  return title;
+}
 int VideoGame::getYear() {//Method for getting the year
-  std::cout << "Year" << std::endl;
+  return year;
 }
 
 char VideoGame::getPublisher() {//Method for getting the publisher
-  cout<<"Publisher"<<endl;
-  //return char[80];
+  return publisher;
 }
 
 int VideoGame::getRating() {//Method for getting the rating
-  cout<<"Rating"<<endl;
-  //return float;
+  return rating;
 }
 
 int VideoGame::getType() {//Method for getting the type
-  std::cout << "Type" << std::endl;
+  return type;
 }
