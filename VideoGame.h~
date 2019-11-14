@@ -14,7 +14,7 @@ class VideoGame
  private:
     char title[80];
     int year;
-    char publisher[80];
+    //char publisher[80];
+    int publisher;
     int rating;
-    int type;
 };

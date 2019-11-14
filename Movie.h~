@@ -16,7 +16,7 @@ class Movie
   char title;
   char director[80];
   int year;
-  int duration;
+  float duration;
   int rating;
   int type;
 };

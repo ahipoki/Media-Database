@@ -1,0 +1,7 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+char publisher[80];
+    int publisher;
+    int rating;
+};

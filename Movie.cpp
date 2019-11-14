@@ -3,7 +3,7 @@
 #include "Movie.h"
 using namespace std;
 
-Movie::Movie(char[] newTitle, char[] newDirector, int newYear, float newDuration, int rating, int newType) {
+Movie::Movie(char[] newTitle, char[] newDirector, int newYear, int newDuration, int rating, int newType) {
   title = newTitle;
   director = newDirector;
   year = newYear;
@@ -28,7 +28,7 @@ int Movie::getRating() {
   return rating;
 }
 
-float Movie::getDuration() {
+int Movie::getDuration() {
   return duration;
 }
 
