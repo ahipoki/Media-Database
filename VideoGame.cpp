@@ -1,27 +1,14 @@
 #include <iostream>
 #include <cstring>
 #include "VideoGame.h"
-#include "Media.h"
-using namespace V;
 
-VideoGame::VideoGame(char newPublisher[80], int newRating, int newID, int newType)
+VideoGame::VideoGame(char* newTitle, int newYear, char* newPublisher, int newRating) : Media(newTitle, newYear)
 {
-  //title = newTitle;
-  //year = newYear;
-  publisher = newPublisher;
+  strcpy(publisher, newPublisher);
   rating = newRating;
-  type = newType;
 };
 
-//char VideoGame::getTitle() {//Method for getting the title
-//return title;
-//}
-
-//int VideoGame::getYear() {//Method for getting the year
-//return year;
-//}
-
-char VideoGame::getPublisher() {//Method for getting the publisher
+char* VideoGame::getPublisher() {//Method for getting the publisher
   return publisher;
 }
 
@@ -30,5 +17,5 @@ int VideoGame::getRating() {//Method for getting the rating
 }
 
 int VideoGame::getType() {//Method for getting the type
-  return type;
+  return 1;
 }

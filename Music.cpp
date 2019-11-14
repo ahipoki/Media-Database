@@ -1,37 +1,25 @@
 #include <iostream>
 #include <cstring>
 #include "Music.h"
-#include "Media.h"
 
-Music::Music(char[] newArtist, float newDuration, char[] newPublisher, int newType) {
-  //title = newTitle;
-  artist = newArtist;
-  //year = newYear;
+Music::Music(char* newTitle, int newYear, char* newArtist, float newDuration, char* newPublisher) : Media(newTitle, newYear) {
+  strcpy(artist, newArtist);
   duration = newDuration;
-  publisher = newPublisher;
-  type = newType;
+  strcpy(publisher, newPublisher);
 }
 
-//char Music::getTitle() {
-//return title;
-//}
-
-char Music::getArtist() {
+char* Music::getArtist() {
   return artist;
 }
-
-//int Music::getYear() {
-//return year;
-//}
 
 float Music::getDuration() {
   return duration;
 }
 
-char Music::getPublisher() {
+char* Music::getPublisher() {
   return publisher;
 }
 
 int Music::getType() {
-  return type;
+  return 3;
 }

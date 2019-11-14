@@ -1,23 +1,25 @@
 #include <iostream>
 #include <cstring>
 #include "VideoGame.h"
+#include "Media.h"
 using namespace V;
 
-VideoGame::VideoGame(char newTitle[80], int newYear, char newPublisher[80], int newRating, int newID, int newType)
+VideoGame::VideoGame(char newPublisher, int newRating, int newType)
 {
-  title = newTitle;
-  year = newYear;
+  //title = newTitle;
+  //year = newYear;
   publisher = newPublisher;
   rating = newRating;
   type = newType;
 };
 
-char VideoGame::getTitle() {//Method for getting the title
-  return title;
-}
-int VideoGame::getYear() {//Method for getting the year
-  return year;
-}
+//char VideoGame::getTitle() {//Method for getting the title
+//return title;
+//}
+
+//int VideoGame::getYear() {//Method for getting the year
+//return year;
+//}
 
 char VideoGame::getPublisher() {//Method for getting the publisher
   return publisher;

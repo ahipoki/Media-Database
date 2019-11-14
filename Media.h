@@ -1,9 +1,19 @@
+#include <iostream>
+#include <cstring>
+
+#ifndef MEDIA_H
+#define MEDIA_H
+
 class Media
 {
-  private:
-    Media(char[], int);
-    char getTitle();
-    int getYear;
   public:
-    int type();
+    Media(char*, int);
+    char* getTitle();
+    int getYear;
+    virtual int getType();
+  private:
+    char title[80];
+    int year;
 };
+
+#endif

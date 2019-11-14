@@ -1,24 +1,15 @@
-#pragma once
-
 #include <iostream>
 #include <cstring>
+#include "Media.h"
 
-namespace V
+class VideoGame
 {
-  class VideoGame
-  {
-  public:
-    VideoGame(char[80], int, int);
-    //char getTitle();
-    //int getYear();
-    char getPublisher();
-    int getRating();
-    int getType();
-  private:
-    //char title[80];
-    //int year;
-    char publisher[80];
-    int rating;
-    int type;
-  };
-}
+public:
+  VideoGame(char*, int, char*, int);
+  char* getPublisher();
+  int getRating();
+  int getType();
+private:
+  char publisher[80];
+  int rating;
+};

@@ -1,21 +1,17 @@
 #include <iostream>
 #include <cstring>
+#include "Media.h"
 
-class Music
+class Music : public Media
 {
  public:
-  Music(char[], float, char[], int);
-  //char getTitle();
-  char getArtist();
-  //int getYear();
+  Music(char*, int, char*, float, char*);
+  char* getArtist();
   float getDuration();
-  char getPublisher();
+  char* getPublisher();
   int getType();
  private:
-  //char title[80];
   char artist[80];
-  //int year;
   float duration;
   char publisher[80];
-  int type;
 };

@@ -4,17 +4,17 @@
 class Music
 {
  public:
-  Music(char[], char[], int, float, char[], int);
-  char getTitle();
+  Music(char[], float, char[], int);
+  //char getTitle();
   char getArtist();
-  int getYear();
+  //int getYear();
   float getDuration();
   char getPublisher();
   int getType();
  private:
-  char title[80];
+  //char title[80];
   char artist[80];
-  int year;
+  //int year;
   float duration;
   char publisher[80];
   int type;

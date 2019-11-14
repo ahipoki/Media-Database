@@ -1,22 +1,22 @@
 #include <iostream>
 #include <cstring>
+#include "Media.h"
 
-class Movie
+class Movie : public Media
 {
  public:
-  Movie(char[], int, int, int);
+  Movie(char*, int, char*, float, int);
   //char getTitle();
-  char getDirector();
+  char* getDirector();
   //int getYear();
-  int getDuration();
+  float getDuration();
   int getRating();
   int getType();
  private:
   //char title;
   char director[80];
   //int year;
-  int duration;
+  float duration;
   int rating;
-  int type;
 };
 

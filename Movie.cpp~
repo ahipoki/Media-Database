@@ -1,28 +1,29 @@
 #include <iostream>
 #include <cstring>
 #include "Movie.h"
+#include "Media.h"
 using namespace std;
 
-Movie::Movie(char[] newTitle, char[] newDirector, int newYear, int newDuration, int rating, int newType) {
-  title = newTitle;
+Movie::Movie(char[] newDirector, int newDuration, int rating, int newType) {
+  //title = newTitle;
   director = newDirector;
-  year = newYear;
+  //year = newYear;
   duration = newDuration;
   rating = newRating;
   type = newType;
 }
 
-char Movie::getTitle() {
-  return title;
-}
+//char Movie::getTitle() {
+//return title;
+//}
 
 char Movie::getDirector() {
   return director;
 }
 
-int Movie::getYear() {
-  return year;
-}
+//int Movie::getYear() {
+//return year;
+//}
 
 int Movie::getRating() {
   return rating;

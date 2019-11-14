@@ -2,15 +2,12 @@
 #include <cstring>
 #include "Media.h"
 
-using namespace std;
-
-Media::Media(char newTitle, int newYear, int newType) {
-  title = newTitle;
+Media::Media(char* newTitle, int newYear) {
+  strcpy(title, newTitle);
   year = newYear;
-  type = newType;
 }
 
-char Media::getTitle() {
+char* Media::getTitle() {
   return title;
 }
 
@@ -19,5 +16,9 @@ int Media::getYear() {
 }
 
 int Media::getType() {
-  return type;
+
+}
+
+Media::Media() {
+  delete[] title;
 }
