@@ -12,7 +12,7 @@ VideoGame::VideoGame(char newTitle[80], int newYear, char newPublisher[80], int 
   type = newType;
 };
 
-char VideoGame::getTitle()[] {//Method for getting the title
+char VideoGame::getTitle() {//Method for getting the title
   return title;
 }
 int VideoGame::getYear() {//Method for getting the year

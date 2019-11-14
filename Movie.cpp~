@@ -28,7 +28,7 @@ int Movie::getRating() {
   return rating;
 }
 
-float Movie::getDuration() {
+int Movie::getDuration() {
   return duration;
 }
 
