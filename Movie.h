@@ -14,9 +14,7 @@ class Movie : public Media
   int getType();
   virtual ~Movie();
  private:
-  //char title;
-  char director[80];
-  //int year;
+  char* director;
   float duration;
   int rating;
 };

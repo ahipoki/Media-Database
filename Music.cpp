@@ -25,5 +25,6 @@ int Music::getType() {
 }
 
 Music::~Music() {
-  delete []Artist;
+  delete []artist;
+  delete []publisher;
 }

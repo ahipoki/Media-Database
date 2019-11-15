@@ -12,7 +12,7 @@ class Music : public Media
   int getType();
   virtual ~Music();
  private:
-  char artist[80];
+  char* artist;
   float duration;
-  char publisher[80];
+  char* publisher;
 };

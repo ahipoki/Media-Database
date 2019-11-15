@@ -11,6 +11,6 @@ public:
   int getType();
   virtual ~VideoGame();
 private:
-  char publisher[80];
+  char* publisher;
   int rating;
 };
