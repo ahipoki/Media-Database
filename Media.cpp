@@ -3,6 +3,7 @@
 #include "Media.h"
 
 Media::Media(char* newTitle, int newYear) {
+  title = new char[strlen(newTitle)+1];
   strcpy(title, newTitle);
   year = newYear;
 }
@@ -19,6 +20,6 @@ int Media::getType() {
 
 }
 
-Media::Media() {
-  delete[] title;
+Media::~Media() {
+  delete []title;
 }

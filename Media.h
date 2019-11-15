@@ -4,6 +4,8 @@
 #ifndef MEDIA_H
 #define MEDIA_H
 
+using namespace std;
+
 class Media
 {
   public:
@@ -11,9 +13,11 @@ class Media
     char* getTitle();
     int getYear();
     virtual int getType();
+    virtual ~Media();
   private:
-    char title[80];
+    char* title;
     int year;
+    int type;
 };
 
 #endif

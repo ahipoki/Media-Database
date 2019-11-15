@@ -2,7 +2,7 @@
 #include <cstring>
 #include "Media.h"
 
-class VideoGame
+class VideoGame : public Media
 {
 public:
   VideoGame(char*, int, char*, int);

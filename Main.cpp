@@ -141,6 +141,7 @@ void deleteMedia(vector<Media*>*mListM) {
       }
     }
   }
+  }
 }
 
 void search(vector <Media*>* mListM) {
@@ -204,10 +205,11 @@ void search(vector <Media*>* mListM) {
 	  }			      						     
 	}
       }
-}
+	    }
+	  }
 	}
-	//}
-
+      }
+	  }
 void addVG(vector<Media*>*mListM) {
   //Title (char), Year (int), Publisher (char), Rating (int)
   char tempTitle[80] = "";
