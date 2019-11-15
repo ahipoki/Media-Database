@@ -9,6 +9,7 @@ public:
   char* getPublisher();
   int getRating();
   int getType();
+  virtual ~VideoGame();
 private:
   char publisher[80];
   int rating;

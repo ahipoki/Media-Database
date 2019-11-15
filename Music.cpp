@@ -23,3 +23,7 @@ char* Music::getPublisher() {
 int Music::getType() {
   return 3;
 }
+
+Music::~Music() {
+  delete []Artist;
+}

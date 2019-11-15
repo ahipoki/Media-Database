@@ -37,3 +37,7 @@ float Movie::getDuration() {
 int Movie::getType() {
   return 2;
 }
+
+Movie::~Movie() {
+  delete []director;
+}

@@ -20,3 +20,7 @@ int VideoGame::getRating() {//Method for getting the rating
 int VideoGame::getType() {//Method for getting the type
   return 1;
 }
+
+VideoGame::~VideoGame() {
+  delete []publisher;
+}
