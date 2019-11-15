@@ -7,11 +7,9 @@
 #include "Media.h"
 using namespace std;
 
-void addMedia(vector<Media*>*mListM);
+//void deleteMedia(vector<Media*>*mListM);
 
-void deleteMedia(vector<Media*>*mListM);
-
-void searchMedia(vector<Media*>*mListM);
+//void searchMedia(vector<Media*>*mListM);
 
 void addVG(vector<Media*>*mListM);
 
@@ -27,26 +25,26 @@ void addMedia(vector<Media*>*mListM) {
     cin.clear();
     cin.ignore(999, '\n');
 
-    for (int i = 0; i M strlen(typeInput); i++) {
-      typeInput[i] = toupper(typeInput[i]);
+    for (int i = 0; i < strlen(typeInput); i++) {
+      typeInput[i] = tolower(typeInput[i]);
     }
-    if (strcmp(typeInput, "Videogames") == 0) {
+    if (strcmp(typeInput, "videogames") == 0) {
       break;
     }
-    else if (strcmp(typeInput, "Movies") == 0) {
+    else if (strcmp(typeInput, "movies") == 0) {
       break;
     }
-    else if (strcmp(typeInput, "Music") == 0) {
+    else if (strcmp(typeInput, "music") == 0) {
       break;
     }
     else {
       cout << "That's an invalid option" << endl;
     }
   }
-  if (strcmp(typeInput, "Videogames") == 0) {
+  if (strcmp(typeInput, "videogames") == 0) {
     addVG(mListM);
   }
-  else if (strcmp(typeInput, "Movies") == 0) {
+  else if (strcmp(typeInput, "movies") == 0) {
     addMO(mListM);
   }
   else {
@@ -62,13 +60,13 @@ void deleteMedia(vector<Media*>*mListM) {
     cin.clear();
     cin.ignore(999, '\n');
     for (int i = 0; i < strlen(deleteInput); i++) {
-      deleteInput[i] = lower(deleteInput[i]);
+      deleteInput[i] = tolower(deleteInput[i]);
     }
     if (strcmp(deleteInput, "title") == 0) {
-      return false;
+      break;
     }
     else if (strcmp(deleteInput, "year") == 0) {
-      return false;
+      break;
     }
     else {
       std::cout << "That's an invalid option" << std::endl;
@@ -118,10 +116,10 @@ void deleteMedia(vector<Media*>*mListM) {
       if ((*mListIt)->getYear() == yearInput) {
         int mediaType = (*mListIt)->getType();
         if (mediaType == 1) {
-	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Videogames*)(*mListIt))->getPublisher() << ", " << (Videogames*)(*mListIt))->getRating() << std::endl;
+	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
         }
         else if (mediaType == 2) {
-	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movies*)(*mListIt))->getDirector() << ", " << ((Movies*)(*mListIt))->getDuration() << ", " << ((Movies*)(*mListIt))->getRating << std::endl;
+	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
         }
 	else if (mediaType == 3) {
 	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
@@ -148,7 +146,7 @@ void deleteMedia(vector<Media*>*mListM) {
 void search(vector <Media*>* mListM) {
   char input[80] = "";
   std::cout << "Do you want to search by title or year?" << std::endl;
-  while (true) {
+  //while (true) {
     cin.get(input, 80);
     cin.clear();
     cin.ignore(999, '\n');
@@ -203,12 +201,12 @@ void search(vector <Media*>* mListM) {
 	  }
 	  else if (mediaType == 3) {
 	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
-	  }																     
+	  }			      						     
 	}
       }
-    }
-  }
 }
+	}
+	//}
 
 void addVG(vector<Media*>*mListM) {
   //Title (char), Year (int), Publisher (char), Rating (int)
@@ -298,7 +296,7 @@ void quit() {
 }
 
 int main() {
-  char input[80] = "";
+  char input[80];
   bool running = true;
   vector<Media*>mList;
   vector<Media*>*mListM = &mList;
@@ -309,7 +307,7 @@ int main() {
       cin.clear();
       cin.ignore(999, '\n');
       for (int i = 0; i < strlen(input); i++) {
-	input[i] = tolower(input[i];
+	input[i] = tolower(input[i]);
       }
       if (strcmp(input, "add") == 0) {
 	break;
@@ -326,18 +324,18 @@ int main() {
       else {
 	cout << "That's not a valid option" << endl;
       }
-      if (strcmp(input, "add") == 0) {
-	add(mListM);
-      }
-      else if (strcmp(input, "search") == 0) {
-	search(mListM);
-      }
-      else if (strcmp(input, "delete") == 0) {
-	delete(mListM);
-      }
-      else {
-	quit();
-      }
+    }
+    if (strcmp(input, "add") == 0) {
+      add(mListM);
+    }
+    else if (strcmp(input, "search") == 0) {
+      search(mListM);
+    }
+    else if (strcmp(input, "delete") == 0) {
+      delete(mListM);
+    }
+    else {
+      quit();
     }
   }
 }
