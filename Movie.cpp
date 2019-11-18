@@ -4,7 +4,8 @@
 #include "Media.h"
 using namespace std;
 
-Movie::Movie(char* newTitle, int newYear, char* newDirector, float newDuration, int newRating) : Media(newTitle, newYear) {
+Movie::Movie(char* newTitle, int newYear, char* newDirector, float newDuration, int newRating) : Media(newTitle, newYear) 
+{
   //title = newTitle;
   strcpy(director, newDirector);
   //director = newDirector;
@@ -14,30 +15,27 @@ Movie::Movie(char* newTitle, int newYear, char* newDirector, float newDuration, 
   //type = newType;
 }
 
-//char Movie::getTitle() {
-//return title;
-//}
-
-char* Movie::getDirector() {
+char* Movie::getDirector() 
+{
   return director;
 }
 
-//int Movie::getYear() {
-//return year;
-//}
-
-int Movie::getRating() {
+int Movie::getRating() 
+{
   return rating;
 }
 
-float Movie::getDuration() {
+float Movie::getDuration() 
+{
   return duration;
 }
 
-int Movie::getType() {
+int Movie::getType() 
+{
   return 2;
 }
 
-Movie::~Movie() {
+Movie::~Movie() 
+{
   delete []director;
 }
