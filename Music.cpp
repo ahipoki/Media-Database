@@ -2,29 +2,35 @@
 #include <cstring>
 #include "Music.h"
 
-Music::Music(char* newTitle, int newYear, char* newArtist, float newDuration, char* newPublisher) : Media(newTitle, newYear) {
+Music::Music(char* newTitle, int newYear, char* newArtist, float newDuration, char* newPublisher) : Media(newTitle, newYear)
+{
   strcpy(artist, newArtist);
   duration = newDuration;
   strcpy(publisher, newPublisher);
 }
 
-char* Music::getArtist() {
+char* Music::getArtist() 
+{
   return artist;
 }
 
-float Music::getDuration() {
+float Music::getDuration() 
+{
   return duration;
 }
 
-char* Music::getPublisher() {
+char* Music::getPublisher() 
+{
   return publisher;
 }
 
-int Music::getType() {
+int Music::getType() 
+{
   return 3;
 }
 
-Music::~Music() {
+Music::~Music() 
+{
   delete []artist;
   delete []publisher;
 }
