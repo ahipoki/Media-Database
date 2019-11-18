@@ -2,24 +2,29 @@
 #include <cstring>
 #include "Media.h"
 
-Media::Media(char* newTitle, int newYear) {
+Media::Media(char* newTitle, int newYear) 
+{
   title = new char[strlen(newTitle)+1];
   strcpy(title, newTitle);
   year = newYear;
 }
 
-char* Media::getTitle() {
+char* Media::getTitle() 
+{
   return title;
 }
 
-int Media::getYear() {
+int Media::getYear() 
+{
   return year;
 }
 
-int Media::getType() {
-
+int Media::getType() 
+{
+  return 0;
 }
 
-Media::~Media() {
+Media::~Media() 
+{
   delete []title;
 }
