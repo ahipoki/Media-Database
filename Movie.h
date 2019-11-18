@@ -6,9 +6,7 @@ class Movie : public Media
 {
  public:
   Movie(char*, int, char*, float, int);
-  //char getTitle();
   char* getDirector();
-  //int getYear();
   float getDuration();
   int getRating();
   int getType();
