@@ -6,21 +6,27 @@
 VideoGame::VideoGame(char* newTitle, int newYear, char* newPublisher, int newRating): Media(newTitle, newYear)
 {
   strcpy(publisher, newPublisher);
+  //Publisher
   rating = newRating;
+  //Rating
 };
 
-char* VideoGame::getPublisher() {//Method for getting the publisher
+char* VideoGame::getPublisher() 
+{//Method for getting the publisher
   return publisher;
 }
 
-int VideoGame::getRating() {//Method for getting the rating
+int VideoGame::getRating() 
+{//Method for getting the rating
   return rating;
 }
 
-int VideoGame::getType() {//Method for getting the type
+int VideoGame::getType() 
+{//Method for getting the type
   return 1;
 }
 
-VideoGame::~VideoGame() {
+VideoGame::~VideoGame() 
+{//Method for deletion
   delete []publisher;
 }
