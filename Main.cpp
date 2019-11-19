@@ -32,88 +32,89 @@ void deleteMedia(vector<Media*>*mListM)
       cin.getline(titleInput, 80);
       for (mListIt = mListM->begin(); mListIt != mListM->end();) 
       {
-	if (strcmp((*mListIt)->getTitle(), titleInput) == 0) 
-	{
-	  int mediaType = (*mListIt)->getType();
-	  if (mediaType == 1) 
-	  {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
-	  }
-	  else if (mediaType == 2) 
-	  {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
-	  }
-	  else if (mediaType == 3) 
-	  {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
-	  }
-	  std::cout << "Are you sure you want to delete this? (y/n)" << std::endl;
-	  char confirmDel = '\n';
-	  std::cin >> confirmDel;
-	  cin.clear();
-	  cin.ignore(999, '\n');
-	  if (confirmDel == 'y') 
-	  {
-	    delete *mListIt;
-	    mListIt = mListM->erase(mListIt);
-	    break;
-	  }
-	  else 
-	  {
-	    std::cout << "You cancelled the deletion" << std::endl;
-	    ++mListIt;
-	  }
-	}
+	      if (strcmp((*mListIt)->getTitle(), titleInput) == 0) 
+	      {
+	        int mediaType = (*mListIt)->getType();
+	        if (mediaType == 1) 
+	        {
+	          std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
+	        }
+	        else if (mediaType == 2) 
+	        {
+	          std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
+	        }
+	        else if (mediaType == 3) 
+	        {
+	          std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
+	        }
+	        std::cout << "Are you sure you want to delete this? (y/n)" << std::endl;
+	        char confirmDel = '\n';
+	        std::cin >> confirmDel;
+	        cin.clear();
+	        cin.ignore(999, '\n');
+	        if (confirmDel == 'y') 
+	        {
+	          delete *mListIt;
+	          mListIt = mListM->erase(mListIt);
+	          break;
+	        }
+	        else 
+	        {
+	          std::cout << "You cancelled the deletion" << std::endl;
+	          ++mListIt;
+	        }
+	      }
       }
     }
-    else if (strcmp(deleteInput, "year")
+    else if (strcmp(deleteInput, "year"))
     {
       int yearInput = 0;
       std::cout << "What is the year?" << std::endl;
       std::cin >> yearInput;
-      cin.clear();
-      cin.ignore(999, '\n');
+      //cin.clear();
+      //cin.ignore(999, '\n');
       for (mListIt = mListM->begin(); mListIt != mListM->end();) 
       {
       	if ((*mListIt)->getYear() == yearInput) 
-	{
-	  int mediaType = (*mListIt)->getType();
+	      {
+	        int mediaType = (*mListIt)->getType();
           if (mediaType == 1) 
-	  {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
-	  }
-	  else if (mediaType == 2) 
-	  {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
-	  }
-	  else if (mediaType == 3) 
-	  {
-	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
-	  }
-	  std::cout << "Are you sure you want to delete this? (y/n)" << std::endl;
-	  char confirmDel = '\n';
-	  std::cin >> confirmDel;
-	  cin.clear();
-	  cin.ignore(999, '\n');
-	  if (confirmDel == 'y') 
-	  {
-	    delete *mListIt;
-	    mListIt = mListM->erase(mListIt);
-	    break;
-	  }
-	  else 
-	  {
-	    std::cout << "You cancelled the deletion" << std::endl;
-	    ++mListIt;
-	  }
-	}
+	        {
+	          std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
+	        }
+	        else if (mediaType == 2) 
+	        {
+	        std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
+	        }
+	        else if (mediaType == 3) 
+	        {
+	          std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
+	        }
+	        std::cout << "Are you sure you want to delete this? (y/n)" << std::endl;
+	        char confirmDel = '\n';
+	        std::cin >> confirmDel;
+	        cin.clear();
+	        cin.ignore(999, '\n');
+	        if (confirmDel == 'y') 
+	        {
+	          delete *mListIt;
+	          mListIt = mListM->erase(mListIt);
+	          break;
+	        }
+	        else 
+	        {
+	          std::cout << "You cancelled the deletion" << std::endl;
+	          ++mListIt;
+	        }
+	      }
       }
-      //else {
-      //std::cout << "That's an invalid option" << std::endl;
-      //}
+    }
+    else {
+      std::cout << "That's an invalid option" << std::endl;
     }
   }
 }
+
 
 void search(vector <Media*>* mListM) 
 {
