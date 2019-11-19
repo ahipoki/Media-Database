@@ -7,10 +7,6 @@
 #include "Media.h"
 using namespace std;
 
-//void deleteMedia(vector<Media*>*mListM);
-
-//void searchMedia(vector<Media*>*mListM);
-
 void addVG(vector<Media*>*mListM);
 
 void addMU(vector<Media*>*mListM);
@@ -19,7 +15,7 @@ void addMO(vector<Media*>*mListM);
 
 void addMedia(vector<Media*>*mListM) {
   char typeInput[80];
-  cout << "Choose the type of media to add. (Videogames/Movies/Music)" << endl;
+  std::cout << "Choose the type of media to add. (Videogames/Movies/Music)" << std::endl;
   while (true) {
     cin.get(typeInput, 80);
     cin.clear();
@@ -38,7 +34,7 @@ void addMedia(vector<Media*>*mListM) {
       break;
     }
     else {
-      cout << "That's an invalid option" << endl;
+      std::cout << "That's an invalid option" << std::endl;
     }
   }
   if (strcmp(typeInput, "videogames") == 0) {
@@ -110,13 +106,13 @@ void deleteMedia(vector<Media*>*mListM) {
     else {
       int yearInput = 0;
       std::cout << "What is the year?" << std::endl;
-      cin >> yearInput;
+      std::cin >> yearInput;
       cin.clear();
       cin.ignore(999, '\n');
       for (mListIt = mListM->begin(); mListIt != mListM->end();) {
-      if ((*mListIt)->getYear() == yearInput) {
-        int mediaType = (*mListIt)->getType();
-        if (mediaType == 1) {
+      	if ((*mListIt)->getYear() == yearInput) {
+        	int mediaType = (*mListIt)->getType();
+        	if (mediaType == 1) {
 	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
         }
         else if (mediaType == 2) {
@@ -125,9 +121,9 @@ void deleteMedia(vector<Media*>*mListM) {
 	else if (mediaType == 3) {
 	  std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
 	}
-	cout << "Are you sure you want to delete this? (y/n)" << std::endl;
+	std::cout << "Are you sure you want to delete this? (y/n)" << std::endl;
 	char confirmDel = '\n';
-	cin >> confirmDel;
+	std::cin >> confirmDel;
         cin.clear();
         cin.ignore(999, '\n');
 	if (confirmDel == 'y') {
@@ -177,10 +173,10 @@ void search(vector <Media*>* mListM) {
 	if (strcmp((*mListIt)->getTitle(), titleInput) == 0) {
 	  int mediaType = (*mListIt)->getType();
 	  if (mediaType == 1) {
-	    cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
+	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((VideoGame*)(*mListIt))->getPublisher() << ", " << ((VideoGame*)(*mListIt))->getRating() << std::endl;
 	  }
 	  else if (mediaType == 2) {
-	    cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
+	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Movie*)(*mListIt))->getDirector() << ", " << ((Movie*)(*mListIt))->getDuration() << ", " << ((Movie*)(*mListIt))->getRating() << std::endl;
 	  }
 	  else if (mediaType == 3) {
 	    std::cout << (*mListIt)->getTitle() << ", " << (*mListIt)->getYear() << ", " << ((Music*)(*mListIt))->getArtist() << ", " << ((Music*)(*mListIt))->getDuration() << ", " << ((Music*)(*mListIt))->getPublisher() << std::endl;
@@ -191,7 +187,7 @@ void search(vector <Media*>* mListM) {
     else {
       int yearInput = 0;
       std::cout << "What is the year?" << std::endl;
-      cin >> yearInput;
+      std::cin >> yearInput;
       cin.clear();
       cin.ignore(999, '\n');
       for (mListIt = mListM->begin(); mListIt != mListM->end(); ++mListIt) {
@@ -210,27 +206,25 @@ void search(vector <Media*>* mListM) {
 	      }
 	    }
 	  }
-//}
 void addVG(vector<Media*>*mListM) {
-  //Title (char), Year (int), Publisher (char), Rating (int)
   char tempTitle[80] = "";
   int tempYear = 0;
   char tempPublisher[80] = "";
   char tempRating = 0;
-  cout << "What is the title?" << endl;
+  std::cout << "What is the title?" << std::endl;
   cin.getline(tempTitle, 80);
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the year?" << endl;
+  std::cout << "What is the year?" << std::endl;
   cin >> tempYear;
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "Who is the publisher?" << endl;
+  std::cout << "Who is the publisher?" << std::endl;
   cin.getline(tempPublisher, 80);
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the rating?" << endl;
-  cin >> tempRating;
+  std::cout << "What is the rating?" << std::endl;
+  std::cin >> tempRating;
   cin.clear();
   cin.ignore(999, '\n');
   mListM->push_back(new VideoGame(tempTitle, tempYear, tempPublisher, tempRating));
@@ -242,20 +236,20 @@ void addMU(vector<Media*>*mListM) {
   char tempArtist[80] = "";
   float tempDuration = 0.0;
   char tempPublisher[80] = "";
-  cout << "What is the title?" << endl;
+  std::cout << "What is the title?" << std::endl;
   cin.getline(tempTitle, 80);
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the year?" << endl;
-  cin >> tempYear;
+  std::cout << "What is the year?" << std::endl;
+  std::cin >> tempYear;
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "Who is the artist?" << endl;
+  std::cout << "Who is the artist?" << std::endl;
   cin.getline(tempArtist, 80);
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the duration?" << endl;
-  cin >> tempDuration;
+  std::cout << "What is the duration?" << std::endl;
+  std::cin >> tempDuration;
   cin.clear();
   cin.ignore(999, '\n');
   mListM->push_back(new Music(tempTitle, tempYear, tempArtist, tempDuration, tempPublisher));
@@ -267,90 +261,104 @@ void addMO(vector<Media*>*mListM) {
   char tempDirector[80] = "";
   float tempDuration = 0.0;
   int tempRating = 0;
-  cout << "What is the title?" << endl;
+  std::cout << "What is the title?" << std::endl;
   cin.getline(tempTitle, 80);
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the year?" << endl;
+  std::cout << "What is the year?" << std::endl;
   cin >> tempYear;
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "Who is the director?" << endl;
+  std::cout << "Who is the director?" << std::endl;
   cin.getline(tempDirector, 80);
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the duration?" << endl;
+  std::cout << "What is the duration?" << std::endl;
   cin >> tempDuration;
   cin.clear();
   cin.ignore(999, '\n');
-  cout << "What is the rating?" << endl;
+  std::cout << "What is the rating?" << std::endl;
   cin >> tempRating;
   cin.clear();
   cin.ignore(999, '\n');
   mListM->push_back(new Movie(tempTitle, tempYear, tempDirector, tempDuration, tempRating));
 }
 
-//void quit() {
-//exit(0);
-//}
-
-int main() {
+int main() 
+{
   char input[80];
   char addInput[80];
   bool running = true;
   vector<Media*>mList;
   vector<Media*>*mListM = &mList;
-  while (running == true) {
+  while (running == true) 
+  {
     std::cout << "Do you want to add, search, delete or quit? (ADD/SEARCH/DELETE/QUIT)" << std::endl;
-    while (true) {
+    while (true)
+    {
       cin.getline(input, 80);
       cin.clear();
       cin.ignore(999, '\n');
-      for (int i = 0; i < strlen(input); i++) {
-	input[i] = tolower(input[i]);
+      for (int i = 0; i < strlen(input); i++) 
+      {
+        input[i] = tolower(input[i]);
       }
-      if (strcmp(input, "add") == 0) {
+      if (strcmp(input, "add") == 0) 
+      {
 	break;
       }
-      else if (strcmp(input, "search") == 0) {
+      else if (strcmp(input, "search") == 0) 
+      {
 	break;
       }
-      else if (strcmp(input, "delete") == 0) {
+      else if (strcmp(input, "delete") == 0) 
+      {
 	break;
       }
-      else if (strcmp(input, "quit") == 0) {
+      else if (strcmp(input, "quit") == 0) 
+      {
 	break;
       }
-      else {
-	cout << "That's not a valid option" << endl;
+      else 
+      {
+        std::cout << "That's not a valid option" << std::endl;
       }
     }
-    if (strcmp(input, "add") == 0) {
+    if (strcmp(input, "add") == 0) 
+    {
       std::cout << "Do you want to add a video game, a movie, or music?" << std::endl;
       cin.getline(addInput, 80);
-      for (int i = 0; i < strlen(addInput); i++) {
-	addInput[i] = tolower(addInput[i]);
+      for (int i = 0; i < strlen(addInput); i++) 
+      {
+      	addInput[i] = tolower(addInput[i]);
       }
-      if (strcmp(addInput, "video game") == 0) {
+      if (strcmp(addInput, "video game") == 0) 
+      {
 	addVG(mListM);
       }
-      else if (strcmp(addInput, "movie") == 0) {
+      else if (strcmp(addInput, "movie") == 0) 
+      {
 	addMO(mListM);
       }
-      else if (strcmp(addInput, "music") == 0) {
+      else if (strcmp(addInput, "music") == 0) 
+      {
 	addMU(mListM);
       }
-      else {
+      else 
+      {
 	std::cout << "That's an invalid option" << std::endl;
       }
     }
-    else if (strcmp(input, "search") == 0) {
+    else if (strcmp(input, "search") == 0) 
+    {
       search(mListM);
     }
-    else if (strcmp(input, "delete") == 0) {
+    else if (strcmp(input, "delete") == 0) 
+    {
       delete(mListM);
     }
-    else {
+    else 
+    {
       running = false;
     }
   }
