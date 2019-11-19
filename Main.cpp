@@ -20,32 +20,16 @@ void deleteMedia(vector<Media*>*mListM)
   while (true) 
   {
     cin.getline(deleteInput, 80);
-    //cin.clear();
-    //cin.ignore(999, '\n');
     for (int i = 0; i < strlen(deleteInput); i++) 
     {
       deleteInput[i] = tolower(deleteInput[i]);
     }
-    //if (strcmp(deleteInput, "title") == 0) 
-    //{
-    //break;
-    //}
-    //else if (strcmp(deleteInput, "year") == 0) 
-    //{
-    //break;
-    //}
-    //else 
-    //{
-    //std::cout << "That's an invalid option" << std::endl;
-    //}
     vector<Media*>::iterator mListIt;
     if(strcmp(deleteInput, "title") == 0) 
     {
       char titleInput[80];
       std::cout << "What is the title?" << std::endl;
       cin.getline(titleInput, 80);
-      //cin.clear();
-      //cin.ignore(999, '\n');
       for (mListIt = mListM->begin(); mListIt != mListM->end();) 
       {
 	if (strcmp((*mListIt)->getTitle(), titleInput) == 0) 
@@ -124,16 +108,10 @@ void deleteMedia(vector<Media*>*mListM)
 	  }
 	}
       }
-      else {
-	std::cout << "That's an invalid option" << std::endl;
-      }
+      //else {
+      //std::cout << "That's an invalid option" << std::endl;
+      //}
     }
-      //else {
-      //std::cout << "That's an invalid option" << std::endl;
-      //}
-      //else {
-      //std::cout << "That's an invalid option" << std::endl;
-      //}
   }
 }
 
