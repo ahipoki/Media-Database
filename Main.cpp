@@ -161,17 +161,21 @@ void search(vector <Media*>* mListM)
 {//Search method
   char input[80];
   std::cout << "Do you want to search by title or year?" << std::endl;
+  //Ask if they want to search by title or year
   cin.getline(input, 80);
+  //Take in their input
   vector<Media*>::iterator mListIt;
   if (strcmp(input, "title") == 0) 
-  {
+  {//If they want to search by title
     char titleInput[80];
     std::cout << "What is the title?" << std::endl;
+    //Ask them for the title
     cin.getline(titleInput, 80);
+    //Take in their input
     for (mListIt = mListM->begin(); mListIt != mListM->end(); ++mListIt) 
-    {
+    {//For the database
       if (strcmp((*mListIt)->getTitle(), titleInput) == 0) 
-      {
+	{//If the input equals an entry in the database
 	int mediaType = (*mListIt)->getType();
 	if (mediaType == 1) 
 	{
