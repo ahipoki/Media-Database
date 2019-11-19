@@ -5,6 +5,7 @@
 
 VideoGame::VideoGame(char* newTitle, int newYear, char* newPublisher, int newRating): Media(newTitle, newYear)
 {
+  publisher = new char[strlen(newPublisher)+1];
   strcpy(publisher, newPublisher);
   rating = newRating;
 };
@@ -26,5 +27,5 @@ int VideoGame::getType()
 
 VideoGame::~VideoGame() 
 {//Method for deletion
-  delete []publisher;
+  delete publisher;
 }

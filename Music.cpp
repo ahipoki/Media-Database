@@ -5,8 +5,10 @@
 
 Music::Music(char* newTitle, int newYear, char* newArtist, float newDuration, char* newPublisher) : Media(newTitle, newYear)
 {
+  artist = new char[strlen(newArtist)+1];
   strcpy(artist, newArtist);
   duration = newDuration;
+  publisher = new char[strlen(newPublisher)+1];
   strcpy(publisher, newPublisher);
 }
 
@@ -32,6 +34,6 @@ int Music::getType()
 
 Music::~Music() 
 {
-  delete []artist;
-  delete []publisher;
+  delete artist;
+  delete publisher;
 }

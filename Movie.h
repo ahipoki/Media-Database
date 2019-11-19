@@ -10,7 +10,7 @@ class Movie : public Media
   float getDuration();
   int getRating();
   int getType();
-  virtual ~Movie();
+  ~Movie();
  private:
   char* director;
   float duration;

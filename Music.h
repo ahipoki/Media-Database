@@ -10,7 +10,7 @@ class Music : public Media
   float getDuration();
   char* getPublisher();
   int getType();
-  virtual ~Music();
+  ~Music();
  private:
   char* artist;
   float duration;

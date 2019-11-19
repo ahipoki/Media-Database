@@ -6,13 +6,10 @@ using namespace std;
 
 Movie::Movie(char* newTitle, int newYear, char* newDirector, float newDuration, int newRating) : Media(newTitle, newYear) 
 {
-  //title = newTitle;
+  director = new char[strlen(newDirector)+1];
   strcpy(director, newDirector);
-  //director = newDirector;
-  //year = newYear;
   duration = newDuration;
   rating = newRating;
-  //type = newType;
 }
 
 char* Movie::getDirector() 
@@ -37,5 +34,5 @@ int Movie::getType()
 
 Movie::~Movie() 
 {
-  delete []director;
+  delete director;
 }
