@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 #include "Music.h"
-#include "Media.h"
 
 Music::Music(char* newTitle, int newYear, char* newArtist, float newDuration, char* newPublisher) : Media(newTitle, newYear)
 {

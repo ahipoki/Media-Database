@@ -6,7 +6,9 @@
 VideoGame::VideoGame(char* newTitle, int newYear, char* newPublisher, int newRating): Media(newTitle, newYear)
 {
   strcpy(publisher, newPublisher);
+  //Publisher
   rating = newRating;
+  //Rating
 };
 
 char* VideoGame::getPublisher() 
