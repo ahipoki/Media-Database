@@ -7,6 +7,12 @@
 #include "Media.h"
 using namespace std;
 
+/*
+ * Finn McKinley
+ * 11/19/19
+ * A database for video games, movies, and music
+ */
+
 void addVG(vector<Media*>*mListM);
 
 void addMU(vector<Media*>*mListM);
@@ -382,33 +388,38 @@ int main()
       else if (strcmp(addInput, "music") == 0) 
       {//If the user wants to add music
 	addMU(mListM);
-	      //Call the add 
+	      //Call the add method passing in the vector
 	cin.clear();
 	cin.ignore(999, '\n');
       }
       else 
-      {
+      {//Else if it's any other input
 	std::cout << "That's an invalid option" << std::endl;
+	      //Tell the user that that's an invalid option
       }
     }
     else if (strcmp(input, "search") == 0) 
-    {
+    {//If they want to search
       search(mListM);
+	    //Call the search method passing in the vector
       cin.clear();
       cin.ignore(999, '\n');
     }
     else if (strcmp(input, "delete") == 0) 
-    {
+    {//Else if they want to delete
       deleteMedia(mListM);
+	    //Call the delete method passing in the vector
       cin.clear();
       cin.ignore(999, '\n');
     }
     else if (strcmp(input, "quit") == 0)
-    {
+    {//Else if they want to quit
       running = false;
+	    //Quit
     }
-    else {
+    else {//Any other input
       std::cout << "That's an invalid option" << std::endl;
+	    //Tell the user that that's an invalid option
     }
   }
 }
