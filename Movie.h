@@ -2,8 +2,13 @@
 #include <cstring>
 #include "Media.h"
 
+/* Finn McKinley
+ * 11/19/19
+ * Movie.h file
+ */
+
 class Movie : public Media
-{//Movie.h file
+{//Movie.h class
  public:
   Movie(char*, int, char*, float, int);
   char* getDirector();
