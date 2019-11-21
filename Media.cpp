@@ -2,6 +2,11 @@
 #include <cstring>
 #include "Media.h"
 
+/* Finn McKinley
+ * 11/19/19
+ * Media.cpp file
+ */
+
 Media::Media(char* newTitle, int newYear) 
 {//Media.cpp class
   title = new char[strlen(newTitle)+1];
