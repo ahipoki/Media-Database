@@ -6,8 +6,13 @@
 
 using namespace std;
 
+/* Finn McKinley
+ * 11/19/19
+ * Media.h file
+ */
+
 class Media
-{//Media.h file
+{//Media.h class
   public:
     Media(char*, int);
     char* getTitle();
