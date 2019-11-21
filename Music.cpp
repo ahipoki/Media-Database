@@ -3,8 +3,13 @@
 #include "Music.h"
 #include "Media.h"
 
+/* Finn McKinley
+ * 11/19/19
+ * Music.cpp file
+ */
+
 Music::Music(char* newTitle, int newYear, char* newArtist, float newDuration, char* newPublisher) : Media(newTitle, newYear)
-{//Music.cpp file
+{//Music.cpp class
   artist = new char[strlen(newArtist)+1];
   //New artist
   strcpy(artist, newArtist);
