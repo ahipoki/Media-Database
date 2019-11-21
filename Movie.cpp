@@ -4,8 +4,13 @@
 #include "Media.h"
 using namespace std;
 
+/* Finn McKinley
+ * 11/19/19
+ * Movie.cpp file
+ */
+
 Movie::Movie(char* newTitle, int newYear, char* newDirector, float newDuration, int newRating) : Media(newTitle, newYear) 
-{//Movie.cpp file
+{//Movie.cpp class
   director = new char[strlen(newDirector)+1];
   //New director
   strcpy(director, newDirector);
